@@ -1,0 +1,179 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Темный фон */
+    color: #f0f0f0; /* Светлый текст */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%; /* Увеличиваем ширину для мобильных устройств */
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #2e2e2e; /* Темно-серый фон для контейнера */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для контейнера */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #9b59b6; /* Фиолетовый цвет заголовка */
+}
+
+.profile-photo {
+    width: 120px; /* Уменьшаем размер фотографии для мобильных устройств */
+    height: 120px;
+    border-radius: 50%; /* Круглая фотография */
+    border: 3px solid #9b59b6; /* Фиолетовая рамка */
+}
+
+.about-me, .interests, .contact {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #3c3c3c; /* Темно-серый фон для секций */
+    border-left: 5px solid #8e44ad; /* Фиолетвая левая граница */
+}
+
+h2 {
+    color: #8e44ad; /* Темный фиолетовый цвет для подзаголовков */
+}
+
+ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+li {
+    background-color: #5e5e5e; /* Серый фон для элементов списка */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px; /* Скругленные углы для списка */
+}
+
+.contact p {
+    margin: 5px 0; /* Убираем отступы между контактами */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #bbb; /* Светло-серый цвет текста в подвале */
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em; /* Уменьшаем размер заголовка на мобильных устройствах */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Уменьшаем размер подзаголовков на мобильных устройствах */
+    }
+
+    .profile-photo {
+        width: 100px; /* Еще меньше размер фотографии на мобильных устройствах */
+        height: 100px;
+    }
+
+    .container {
+        padding: 15px; /* Уменьшаем отступы в контейнере на мобильных устройствах */
+    }
+
+    .about-me, .interests, .contact {
+        padding: 10px; /* Уменьшаем отступы в секциях на мобильных устройствах */
+    }
+
+    li {
+        padding: 8px; /* Уменьшаем отступы в элементах списка на мобильных устройствах */
+    }
+}
+.about-me {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-me h2 {
+    text-align: center;
+    color: #8e44ad;
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cb9bdd;
+}
+
+.about-me ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-me li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.about-me li:hover {
+    background-color: #e9ecef;
+}
+
+.highlight {
+    color: #007bff;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+a{
+    color: darkturquoise;
+    text-decoration: none;
+}
+.interests {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.interests h2 {
+    text-align: center;
+    color: #8e44ad;
+    margin-bottom: 20px;
+}
+
+.interests ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.interests li {
+    opacity: 0; /* Скрываем элементы по умолчанию */
+    transform: translateY(20px); /* Сдвигаем элементы вниз */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавный переход */
+}
+
+.interests li.visible {
+    opacity: 1; /* Делаем элементы видимыми */
+    transform: translateY(0); /* Возвращаем элементы на место */
+}
