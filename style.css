@@ -1,20 +1,23 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a; /* Темный фон */
-    color: #f0f0f0; /* Светлый текст */
+    background-color: #1a1a1a; 
+    color: #f0f0f0; 
     margin: 0;
-    padding: 0;
+    padding: 15px;
 }
 
 .container {
-    width: 90%; /* Увеличиваем ширину для мобильных устройств */
+    width: 80%; 
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: #2e2e2e; /* Темно-серый фон для контейнера */
-    border-radius: 10px; /* Скругленные углы */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Тень для контейнера */
+    background-color: #2e2e2e; 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px #8e44ad,
+    0 0 30px #8e44ad,
+    0 0 40px #8e44ad; 
+    
 }
 
 header {
@@ -23,75 +26,73 @@ header {
 }
 
 h1 {
-    color: #9b59b6; /* Фиолетовый цвет заголовка */
+    color: #9b59b6; 
 }
 
 .profile-photo {
-    width: 120px; /* Уменьшаем размер фотографии для мобильных устройств */
+    width: 120px; 
     height: 120px;
-    border-radius: 50%; /* Круглая фотография */
-    border: 3px solid #9b59b6; /* Фиолетовая рамка */
+    border-radius: 50%; 
+    border: 3px solid #9b59b6; 
 }
 
 .about-me, .interests, .contact {
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #3c3c3c; /* Темно-серый фон для секций */
-    border-left: 5px solid #8e44ad; /* Фиолетвая левая граница */
+    background-color: #3c3c3c; 
+    border-left: 5px solid #8e44ad; 
 }
 
 h2 {
-    color: #8e44ad; /* Темный фиолетовый цвет для подзаголовков */
+    color: #8e44ad; 
 }
 
 ul {
-    list-style-type: none; /* Убираем маркеры списка */
+    list-style-type: none; 
     padding: 0;
 }
 
 li {
-    background-color: #5e5e5e; /* Серый фон для элементов списка */
+    background-color: #5e5e5e; 
     margin: 5px 0;
     padding: 10px;
-    border-radius: 5px; /* Скругленные углы для списка */
+    border-radius: 5px; 
 }
 
 .contact p {
-    margin: 5px 0; /* Убираем отступы между контактами */
+    margin: 5px 0; 
 }
-
 footer {
     text-align: center;
     margin-top: 20px;
     font-size: 0.9em;
-    color: #bbb; /* Светло-серый цвет текста в подвале */
+    color: #bbb;
 }
 
-/* Медиазапросы для мобильных устройств */
 @media (max-width: 600px) {
     h1 {
-        font-size: 1.8em; /* Уменьшаем размер заголовка на мобильных устройствах */
+        font-size: 1.8em; 
     }
 
     h2 {
-        font-size: 1.5em; /* Уменьшаем размер подзаголовков на мобильных устройствах */
+        font-size: 1.5em; 
     }
 
     .profile-photo {
-        width: 100px; /* Еще меньше размер фотографии на мобильных устройствах */
+        width: 100px; 
         height: 100px;
     }
 
     .container {
-        padding: 15px; /* Уменьшаем отступы в контейнере на мобильных устройствах */
+        padding: 15px; 
     }
 
     .about-me, .interests, .contact {
-        padding: 10px; /* Уменьшаем отступы в секциях на мобильных устройствах */
+        padding: 10px; 
     }
 
     li {
-        padding: 8px; /* Уменьшаем отступы в элементах списка на мобильных устройствах */
+        padding: 8px; 
     }
 }
 .about-me {
@@ -176,4 +177,7 @@ a{
 .interests li.visible {
     opacity: 1; /* Делаем элементы видимыми */
     transform: translateY(0); /* Возвращаем элементы на место */
+}
+.contact{
+    border-radius: 10px;
 }
