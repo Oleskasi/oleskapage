@@ -1,10 +1,14 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a; 
     color: #f0f0f0; 
     margin: 0;
+
     padding: 15px;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, #f00f0f 0%, #000427 25%, #020202 51%, #4d0244 100%);
+    animation: animationbg-1 7s ease infinite;
+
 }
 
 .container {
@@ -47,12 +51,12 @@ h2 {
     color: #8e44ad; 
 }
 
-ul {
+.container ul {
     list-style-type: none; 
     padding: 0;
 }
 
-li {
+.container li {
     background-color: #5e5e5e; 
     margin: 5px 0;
     padding: 10px;
@@ -69,7 +73,7 @@ footer {
     color: #bbb;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     h1 {
         font-size: 1.8em; 
     }
@@ -94,6 +98,7 @@ footer {
     li {
         padding: 8px; 
     }
+    
 }
 .about-me {
     border-radius: 10px;
@@ -169,15 +174,129 @@ a{
 }
 
 .interests li {
-    opacity: 0; /* Скрываем элементы по умолчанию */
-    transform: translateY(20px); /* Сдвигаем элементы вниз */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавный переход */
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .interests li.visible {
-    opacity: 1; /* Делаем элементы видимыми */
-    transform: translateY(0); /* Возвращаем элементы на место */
+    opacity: 1; 
+    transform: translateY(0); 
 }
 .contact{
     border-radius: 10px;
+}
+
+
+
+
+
+
+.header {
+    right: 0;
+    position: sticky;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end; 
+    padding: 10px 20px;
+    z-index: 9999;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease; 
+    z-index: 9000;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(193, 0, 132);
+    margin: 4px 0;
+    transition: all 0.3s ease; 
+}
+
+.nav-links {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    z-index: 1000; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.nav-links.active {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    opacity: 1; 
+}
+
+.nav-links ul {
+    
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links ul li {
+    padding: 20px 0;
+}
+
+.nav-links ul li a {
+    
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+/*крест менюхи*/
+.hamburger.active .line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg); 
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0; 
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg); 
+}
+
+
+.hamburger:hover{
+    scale: 1.1;
+}
+
+.nav-links ul li a:hover {
+    color: #f555e2;
+    font-size: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes animationbg-1 {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
