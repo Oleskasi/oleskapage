@@ -1,3 +1,5 @@
+
+//анимка
 document.addEventListener("DOMContentLoaded", function() {
     const interestsItems = document.querySelectorAll('.interests li');
 
@@ -14,4 +16,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener('scroll', checkVisibility);
     checkVisibility(); 
+});
+
+
+
+
+
+//менющка
+
+document.getElementById('hamburger').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    const hamburger = this;
+
+    navLinks.classList.toggle('active'); 
+    hamburger.classList.toggle('active'); 
 });
