@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Личное портфолио Олега - молодого человека из Москвы, увлекающегося армрестлингом, аниме и путешествиями.">
+    <meta name="keywords" content="портфолио, Олег, Москва, армрестлинг, аниме, путешествия">
     <title>Мое Портфолио</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <main>
 
     <div class="header">
         <div id="hamburger" class="hamburger">
@@ -32,8 +34,11 @@
 
     <div class="container">
         <header>
-            <h1>Привет, я Олег!</h1>
-            <img src="photo_5314515528058006162_y.jpg" alt="Моя фотография" class="profile-photo"> 
+            <div itemscope itemtype="https://schema.org/Person">
+                <h1 itemprop="name">Привет, я Олег!</h1>
+                <img src="photo_5314515528058006162_y.jpg" alt="Моя фотография" class="profile-photo" itemprop="image">
+                <p itemprop="description">Мне 16 лет, живу в Москве, увлекаюсь армрестлингом и аниме.</p>
+            </div>
         </header>
         
         <section class="about-me">
@@ -68,7 +73,7 @@
 
     </div>
 
-
+</main>
 
 
 
